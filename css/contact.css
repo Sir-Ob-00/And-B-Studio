@@ -1,7 +1,7 @@
 /* Contact Hero */
 .contact-hero {
     height: 60vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/contact-hero.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/Contact.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -9,7 +9,6 @@
     justify-content: center;
     text-align: center;
     color: #fff;
-    margin-top: 80px;
 }
 
 .contact-hero .hero-content {
@@ -93,7 +92,7 @@
 .info-item i {
     font-size: 1.5rem;
     margin-right: 1rem;
-    color: #007bff;
+    color: var(--secondary-color);
 }
 
 .info-item h3 {
@@ -148,14 +147,14 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #3498db;
+    border-color: var(--secondary-color);
     outline: none;
     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.25);
     background-color: #fff;
 }
 
 .submit-button {
-    background: #3498db;
+    background: var(--secondary-color);
     color: #fff;
     padding: 1rem 2rem;
     border: none;
@@ -167,9 +166,9 @@
 }
 
 .submit-button:hover {
-    background: #2980b9;
+    background: #c13326;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 5px 15px rgba(216, 47, 103, 0.3);
 }
 
 /* Map Section */

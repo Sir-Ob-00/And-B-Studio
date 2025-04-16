@@ -1,8 +1,8 @@
 /* Portfolio Hero Section */
 .portfolio-hero {
     position: relative;
-    height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/portfolio/portfolio_hero.jpg');
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/Portolio/portfolio_hero.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -22,12 +22,21 @@
     pointer-events: none;
 }
 
-.camera-left, .camera-right {
+.camera-left{
     position: absolute;
-    height: 60%;
+    height: 90%;
     object-fit: contain;
     z-index: 2;
     bottom: 0;
+}
+
+.camera-right {
+    position: absolute;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+    bottom: 0;
+    top: 0;
 }
 
 .camera-left {

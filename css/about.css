@@ -1,7 +1,7 @@
 /* About Hero */
 .about-hero {
-    height: 60vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/about-hero.jpg');
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/About/about-service.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -12,9 +12,17 @@
     padding-top: 80px;
 }
 
-.about-hero h1 {
-    font-size: 3rem;
+/* .about-hero h1 {
+    font-size: 5rem;
     margin-bottom: 1rem;
+
+    @media(max-width: 480px) {
+        font-size: 3rem;
+    }
+} */
+
+.about-hero p {
+    font-size: 2rem;
 }
 
 /* Container */

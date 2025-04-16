@@ -7,24 +7,34 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
-            <a href="index.html">Andy-B Studios</a>
+            <a href="index.html">Video & Photography</a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="book.html">Book</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
 
     <!-- About Hero -->
-    <section class="about-hero">
+    <section class="about-hero" id="hero" data-aos="fade-up" data-aos-duration="1000">
         <div class="hero-content">
             <h1>Our Story</h1>
             <p>Capturing moments, creating memories</p>
@@ -32,15 +42,15 @@
     </section>
 
     <!-- Story Section -->
-    <section class="story-section">
+    <section class="story-section" id="story">
         <div class="container">
-            <h2>Our Journey</h2>
+            <h2 data-aos="fade-up">Our Journey</h2>
             <div class="story-content">
-                <div class="story-text">
+                <div class="story-text" data-aos="fade-right" data-aos-duration="1000">
                     <p>Founded in 2010, Andy-B Studios began as a small photography studio with a big dream. What started as a passion project has grown into a full-service photography and videography studio, serving clients across the region.</p>
                     <p>Our journey has been marked by countless special moments, from intimate weddings to grand corporate events. Each project has helped us grow and refine our craft, always striving for excellence in every shot.</p>
                 </div>
-                <div class="story-image">
+                <div class="story-image" data-aos="fade-left" data-aos-duration="1000">
                     <img src="images/about-story.jpg" alt="Our Studio">
                 </div>
             </div>
@@ -48,21 +58,21 @@
     </section>
 
     <!-- Mission Section -->
-    <section class="mission-section">
+    <section class="mission-section" id="mission">
         <div class="container">
-            <h2>Our Mission</h2>
+            <h2 data-aos="fade-up">Our Mission</h2>
             <div class="mission-content">
-                <div class="mission-card">
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
                     <i class="fas fa-camera"></i>
                     <h3>Capture</h3>
                     <p>To capture authentic moments that tell your unique story</p>
                 </div>
-                <div class="mission-card">
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-heart"></i>
                     <h3>Create</h3>
                     <p>To create timeless memories that last a lifetime</p>
                 </div>
-                <div class="mission-card">
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="300">
                     <i class="fas fa-star"></i>
                     <h3>Excel</h3>
                     <p>To excel in quality and service in every project</p>
@@ -72,21 +82,21 @@
     </section>
 
     <!-- Team Section -->
-    <section class="team-section">
+    <section class="team-section" id="team">
         <div class="container">
-            <h2>Meet Our Team</h2>
+            <h2 data-aos="fade-up">Meet Our Team</h2>
             <div class="team-grid">
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
                     <img src="images/team-1.jpg" alt="Andy B">
                     <h3>Andy B</h3>
                     <p>Founder & Lead Photographer</p>
                 </div>
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
                     <img src="images/team-2.jpg" alt="Sarah K">
                     <h3>Sarah K</h3>
                     <p>Videography Director</p>
                 </div>
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
                     <img src="images/team-3.jpg" alt="Mike T">
                     <h3>Mike T</h3>
                     <p>Creative Editor</p>
@@ -109,22 +119,42 @@
                 </ul>
             </div>
             <div class="footer-section">
+                <h3>Working Hours</h3>
+                <ul class="working-hours">
+                    <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+                    <li>Saturday: 10:00 AM - 4:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+            <div class="footer-section">
                 <h3>Contact Us</h3>
                 <p>Email: info@andybstudios.com</p>
                 <p>Phone: (123) 456-7890</p>
+                <p>Address: 123 Photography Street, Accra, Ghana</p>
+            </div>
+            <div class="footer-section social-section">
+                <h3>Follow Us</h3>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Andy-B Studios. All rights reserved.</p>
-            <a href="privacy-policy.html">Privacy Policy</a>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/about.js"></script>
 </body>
 </html> 

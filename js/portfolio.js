@@ -1,3 +1,219 @@
+// Portfolio Data
+const portfolioData = {
+    wedding: [
+        {
+            image: 'images/Wedding/Nadia-Nii.jpg',
+            title: 'Nadia & Nii\'s Wedding',
+            description: 'A beautiful traditional wedding ceremony'
+        },
+        {
+            image: 'images/Wedding/Alice-Derek-Wedding.jpg',
+            title: 'Alice & Derek\'s Wedding',
+            description: 'Elegant church wedding celebration'
+        },
+        {
+            image: 'images/Wedding/Alice-Derek-Wedding.jpg',
+            title: 'Alice & Derek\'s Wedding',
+            description: 'Elegant church wedding celebration'
+        },
+        {
+            image: 'images/Wedding/Alice-Derek-Wedding.jpg',
+            title: 'Alice & Derek\'s Wedding',
+            description: 'Elegant church wedding celebration'
+        }
+    ],
+    birthday: [
+        {
+            image: 'images/Birthdays/Birthday Adrina.JPG',
+            title: 'Adrina\'s Birthday',
+            description: 'Colorful birthday celebration'
+        },
+        {
+            image: 'images/Birthdays/Birthday Adrina.JPG',
+            title: 'Adrina\'s Birthday',
+            description: 'Colorful birthday celebration'
+        },
+        {
+            image: 'images/Birthdays/Birthday Adrina.JPG',
+            title: 'Adrina\'s Birthday',
+            description: 'Colorful birthday celebration'
+        },
+        {
+            image: 'images/Birthdays/Birthday Adrina.JPG',
+            title: 'Adrina\'s Birthday',
+            description: 'Colorful birthday celebration'
+        }
+    ],
+    corporate: [
+        {
+            image: 'images/Corporate/Wanderlust-1.jpeg',
+            title: 'Wanderlust Conference',
+            description: 'Corporate event photography'
+        },
+        {
+            image: 'images/Corporate/career day 2.jpg',
+            title: 'Career Day',
+            description: 'Professional corporate event'
+        },
+        {
+            image: 'images/Corporate/Wanderlust-1.jpeg',
+            title: 'Wanderlust Conference',
+            description: 'Corporate event photography'
+        },
+        {
+            image: 'images/Corporate/career day 2.jpg',
+            title: 'Career Day',
+            description: 'Professional corporate event'
+        }
+    ],
+    lifestyle: [
+        {
+            image: 'images/Lifestyle/Amana_AfricanPrint.jpg',
+            title: 'African Print Collection',
+            description: 'Cultural lifestyle shoot'
+        },
+        {
+            image: 'images/Lifestyle/Holiday vibe.jpg',
+            title: 'Holiday Vibe',
+            description: 'Seasonal lifestyle photography'
+        },
+        {
+            image: 'images/Lifestyle/Amana_AfricanPrint.jpg',
+            title: 'African Print Collection',
+            description: 'Cultural lifestyle shoot'
+        },
+        {
+            image: 'images/Lifestyle/Holiday vibe.jpg',
+            title: 'Holiday Vibe',
+            description: 'Seasonal lifestyle photography'
+        }
+    ],
+    other: [
+        {
+            image: 'images/Lifestyle/Amana_AfricanPrint.jpg',
+            title: 'Special Event',
+            description: 'Unique photography session'
+        },
+        {
+            image: 'images/Lifestyle/Holiday vibe.jpg',
+            title: 'Special Event',
+            description: 'Unique photography session'
+        },
+        {
+            image: 'images/Lifestyle/Amana_AfricanPrint.jpg',
+            title: 'Special Event',
+            description: 'Unique photography session'
+        },
+        {
+            image: 'images/Lifestyle/Holiday vibe.jpg',
+            title: 'Special Event',
+            description: 'Unique photography session'
+        }
+    ]
+};
+
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true
+});
+
+// Portfolio Grid Generation
+const grid = document.querySelector('.grid');
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+function generatePortfolioItems(category = 'all') {
+    grid.innerHTML = '';
+    let items = [];
+
+    if (category === 'all') {
+        Object.values(portfolioData).forEach(categoryItems => {
+            items = [...items, ...categoryItems];
+        });
+    } else {
+        items = portfolioData[category] || [];
+    }
+
+    items.forEach((item, index) => {
+        const portfolioItem = document.createElement('div');
+        portfolioItem.className = 'portfolio-item';
+        portfolioItem.setAttribute('data-aos', 'fade-up');
+        portfolioItem.setAttribute('data-aos-delay', (index % 4) * 100);
+
+        portfolioItem.innerHTML = `
+            <img src="${item.image}" alt="${item.title}">
+            <div class="portfolio-overlay">
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+            </div>
+        `;
+
+        // Add click event for lightbox
+        portfolioItem.addEventListener('click', () => {
+            showLightbox(item);
+        });
+
+        grid.appendChild(portfolioItem);
+    });
+}
+
+// Filter Button Functionality
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+        // Generate portfolio items for selected category
+        generatePortfolioItems(button.dataset.filter);
+    });
+});
+
+// Lightbox Functionality
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+document.body.appendChild(lightbox);
+
+function showLightbox(item) {
+    lightbox.innerHTML = `
+        <div class="lightbox-content">
+            <span class="close-lightbox">&times;</span>
+            <img src="${item.image}" alt="${item.title}" class="lightbox-image">
+            <div class="lightbox-caption">
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+            </div>
+        </div>
+    `;
+
+    lightbox.classList.add('active');
+
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // Close lightbox when clicking the close button
+    const closeBtn = lightbox.querySelector('.close-lightbox');
+    closeBtn.addEventListener('click', closeLightbox);
+
+    // Close lightbox when pressing Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+}
+
+// Initialize portfolio with all items
+generatePortfolioItems();
+
 document.addEventListener('DOMContentLoaded', function() {
     const portfolioItems = [
         // Wedding Category
@@ -246,17 +462,18 @@ document.addEventListener('DOMContentLoaded', function() {
         grid.setAttribute('data-filter', filterValue);
 
         // Add click event listeners to portfolio items
-        document.querySelectorAll('.portfolio-item img').forEach(img => {
-            img.addEventListener('click', function() {
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
                 const lightboxImg = lightbox.querySelector('.lightbox-image');
                 const lightboxTitle = lightbox.querySelector('.lightbox-caption h3');
                 const lightboxDesc = lightbox.querySelector('.lightbox-caption p');
 
-                lightboxImg.src = this.src;
-                lightboxImg.alt = this.alt;
-                lightboxTitle.textContent = this.dataset.title;
-                lightboxDesc.textContent = this.dataset.description;
-                
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxTitle.textContent = img.dataset.title;
+                lightboxDesc.textContent = img.dataset.description;
+
                 lightbox.classList.add('active');
                 document.body.style.overflow = 'hidden';
             });
@@ -266,6 +483,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close lightbox when clicking the close button or outside the image
     lightbox.addEventListener('click', function(e) {
         if (e.target === lightbox || e.target.classList.contains('close-lightbox')) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close lightbox when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
             lightbox.classList.remove('active');
             document.body.style.overflow = '';
         }

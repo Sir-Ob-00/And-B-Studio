@@ -1,0 +1,202 @@
+/* Terms Hero */
+.terms-hero {
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/terms of service.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 80px;
+}
+
+.terms-hero .hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.terms-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.terms-hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+/* Terms Content */
+.terms-content {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.terms-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Terms Navigation */
+.terms-nav {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.terms-nav h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.terms-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.terms-nav li {
+    margin-bottom: 0.8rem;
+}
+
+.terms-nav a {
+    color: #7f8c8d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.terms-nav a:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* Terms Text */
+.terms-text {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.terms-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.terms-section:last-child {
+    border-bottom: none;
+}
+
+.terms-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.terms-section p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.terms-section a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.terms-section a:hover {
+    color: #c22f22;
+    text-decoration: underline;
+}
+
+.terms-section ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.terms-section li {
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.contact-info {
+    margin-top: 1rem;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .terms-container {
+        grid-template-columns: 1fr;
+    }
+
+    .terms-nav {
+        position: static;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .terms-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .terms-hero p {
+        font-size: 1.2rem;
+    }
+
+    .terms-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .terms-nav {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .terms-hero h1 {
+        font-size: 2rem;
+    }
+
+    .terms-hero p {
+        font-size: 1rem;
+    }
+
+    .terms-text {
+        padding: 1.5rem;
+    }
+
+    .terms-section h2 {
+        font-size: 1.3rem;
+    }
+} 

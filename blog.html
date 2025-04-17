@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Andy-B Studios</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images\logo_white.PNG"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="book.html">Book</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Our Blog</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Latest news, tips, and insights from our team</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Main Content -->
+                <main class="blog-posts">
+                    <!-- Featured Post -->
+                    <article class="featured-post" data-aos="fade-up">
+                        <div class="post-image">
+                            <img src="images/blog/capture.jpg" alt="Featured Post">
+                            <span class="category">Photography</span>
+                        </div>
+                        <div class="post-content">
+                            <h2>The Art of Capturing Perfect Moments</h2>
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> March 15, 2024</span>
+                                <span><i class="far fa-user"></i> By Admin</span>
+                                <span><i class="far fa-comments"></i> 5 Comments</span>
+                            </div>
+                            <p>Discover the secrets behind capturing those perfect moments that tell a story...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Regular Posts -->
+                    <div class="posts-grid">
+                        <!-- Post 1 -->
+                        <article class="post" data-aos="fade-up" data-aos-delay="100">
+                            <div class="post-image">
+                                <img src="images/blog/video camera.png" alt="Post 1">
+                                <span class="category">Videography</span>
+                            </div>
+                            <div class="post-content">
+                                <h3>Cinematic Wedding Videos: A Complete Guide</h3>
+                                <div class="post-meta">
+                                    <span><i class="far fa-calendar"></i> March 10, 2024</span>
+                                    <span><i class="far fa-user"></i> By Admin</span>
+                                </div>
+                                <p>Learn how to create stunning cinematic wedding videos that capture the essence of the day...</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+
+                        <!-- Post 2 -->
+                        <article class="post" data-aos="fade-up" data-aos-delay="200">
+                            <div class="post-image">
+                                <img src="images/Portolio/camera man.png" alt="Post 2">
+                                <span class="category">Tips</span>
+                            </div>
+                            <div class="post-content">
+                                <h3>10 Essential Photography Tips for Beginners</h3>
+                                <div class="post-meta">
+                                    <span><i class="far fa-calendar"></i> March 5, 2024</span>
+                                    <span><i class="far fa-user"></i> By Admin</span>
+                                </div>
+                                <p>Master the basics of photography with these essential tips for beginners...</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+
+                        <!-- Post 3 -->
+                        <article class="post" data-aos="fade-up" data-aos-delay="300">
+                            <div class="post-image">
+                                <img src="images/blog/camera black.png" alt="Post 3">
+                                <span class="category">Equipment</span>
+                            </div>
+                            <div class="post-content">
+                                <h3>Must-Have Camera Gear for Professional Photographers</h3>
+                                <div class="post-meta">
+                                    <span><i class="far fa-calendar"></i> March 1, 2024</span>
+                                    <span><i class="far fa-user"></i> By Admin</span>
+                                </div>
+                                <p>Discover the essential camera gear every professional photographer should have...</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination" data-aos="fade-up">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="sidebar" data-aos="fade-left">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Search</h3>
+                        <form class="search-form">
+                            <input type="text" placeholder="Search...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Categories</h3>
+                        <ul class="categories">
+                            <li><a href="#" data-category="photography">Photography</a></li>
+                            <li><a href="#" data-category="videography">Videography</a></li>
+                            <li><a href="#" data-category="tips">Tips & Tricks</a></li>
+                            <li><a href="#" data-category="equipment">Equipment</a></li>
+                            <li><a href="#" data-category="events">Events</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Recent Posts Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Recent Posts</h3>
+                        <ul class="recent-posts">
+                            <li>
+                                <img src="images/blog/capture.jpg" alt="Recent Post 1">
+                                <div>
+                                    <h4><a href="#">The Art of Capturing Perfect Moments</a></h4>
+                                    <span>March 15, 2024</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/blog/video camera.png" alt="Recent Post 2">
+                                <div>
+                                    <h4><a href="#">Cinematic Wedding Videos Guide</a></h4>
+                                    <span>March 10, 2024</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/blog/camera man.png" alt="Recent Post 3">
+                                <div>
+                                    <h4><a href="#">10 Essential Photography Tips</a></h4>
+                                    <span>March 5, 2024</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Tags</h3>
+                        <div class="tags">
+                            <a href="#">photography</a>
+                            <a href="#">videography</a>
+                            <a href="#">wedding</a>
+                            <a href="#">portrait</a>
+                            <a href="#">landscape</a>
+                            <a href="#">cinematic</a>
+                            <a href="#">tips</a>
+                            <a href="#">gear</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Working Hours</h3>
+                <ul class="working-hours">
+                    <li>Monday - Friday: 9:00 AM - 8:00 PM</li>
+                    <li>Saturday: 10:00 AM - 8:00 PM</li>
+                    <li>Sunday: 12:PM - 8:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@andybstudios.com</p>
+                <p>Phone: (+233) 456-7890</p>
+                <p>Address: Pankrono, Kumasi, Ghana</p>
+            </div>
+            <div class="footer-section social-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Andy-B Studios. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html> 

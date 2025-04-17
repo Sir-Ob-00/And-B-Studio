@@ -58,7 +58,7 @@ const testimonials = [
     {
         quote: "Amazing work! The photos captured our special day perfectly.",
         author: "Koffi",
-        image: "images/testimonials/koffi.jpg",
+        image: "images/testimonials/Koffi.jpg",
         rating: 4
     },
     {

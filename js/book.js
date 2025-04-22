@@ -3,9 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const bookingForm = document.querySelector('.booking-form');
     const submitButton = document.querySelector('.submit-button');
 
-    // Add submit event listener to the form
     bookingForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault(); 
 
         // Get form values
         const name = document.getElementById('name').value;
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const eventDate = document.getElementById('event-date').value;
         const message = document.getElementById('message').value;
 
-        // Validate form fields
+        
         if (!name || !email || !phone || !eventType || !eventDate) {
             showAlert('Please fill in all required fields', 'error');
             return;
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Validate phone number format (basic validation)
+        // Validate phone number format
         const phoneRegex = /^[0-9]{10,}$/;
         if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
             showAlert('Please enter a valid phone number', 'error');
@@ -44,12 +43,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to show alert message
     function showAlert(message, type) {
-        // Create alert element
+        
         const alertDiv = document.createElement('div');
         alertDiv.className = `alert ${type}`;
         alertDiv.textContent = message;
 
-        // Style the alert
+        
         alertDiv.style.position = 'fixed';
         alertDiv.style.top = '20px';
         alertDiv.style.left = '50%';
@@ -62,14 +61,14 @@ document.addEventListener('DOMContentLoaded', function() {
         alertDiv.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
         alertDiv.style.transition = 'all 0.3s ease';
 
-        // Set background color based on type
+       
         if (type === 'success') {
             alertDiv.style.backgroundColor = '#2ecc71';
         } else {
             alertDiv.style.backgroundColor = '#e74c3c';
         }
 
-        // Add alert to the document
+        
         document.body.appendChild(alertDiv);
 
         // Remove alert after 3 seconds

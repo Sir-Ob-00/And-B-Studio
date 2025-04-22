@@ -2,12 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the form element
     const contactForm = document.querySelector('.contact-form');
     const submitButton = document.querySelector('.submit-button');
-
-    // Add submit event listener to the form
+    
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault(); 
 
-        // Get form values
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const subject = document.getElementById('subject').value;
@@ -26,21 +24,19 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // If all validations pass, show success message
         showAlert('Message sent successfully! We will get back to you soon.', 'success');
-        
-        // Reset the form
+
         contactForm.reset();
     });
 
     // Function to show alert message
     function showAlert(message, type) {
-        // Create alert element
+        
         const alertDiv = document.createElement('div');
         alertDiv.className = `alert ${type}`;
         alertDiv.textContent = message;
 
-        // Style the alert
+        
         alertDiv.style.position = 'fixed';
         alertDiv.style.top = '20px';
         alertDiv.style.left = '50%';
@@ -53,14 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
         alertDiv.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
         alertDiv.style.transition = 'all 0.3s ease';
 
-        // Set background color based on type
         if (type === 'success') {
             alertDiv.style.backgroundColor = '#2ecc71';
         } else {
             alertDiv.style.backgroundColor = '#e74c3c';
         }
 
-        // Add alert to the document
         document.body.appendChild(alertDiv);
 
         // Remove alert after 3 seconds

@@ -4,7 +4,7 @@ AOS.init({
     once: true
 });
 
-// Smooth scrolling
+// Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -41,12 +41,10 @@ document.querySelectorAll('.faq-question').forEach(question => {
         const faqItem = question.parentElement;
         const isActive = faqItem.classList.contains('active');
         
-        // Close all other FAQ items
         document.querySelectorAll('.faq-item').forEach(item => {
             item.classList.remove('active');
         });
         
-        // Toggle current FAQ item
         if (!isActive) {
             faqItem.classList.add('active');
         }

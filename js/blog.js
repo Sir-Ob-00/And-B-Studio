@@ -14,8 +14,6 @@ if (searchForm) {
         const searchTerm = searchInput.value.trim();
         
         if (searchTerm) {
-            // Here you would typically make an AJAX request to your backend
-            // For now, we'll just show an alert
             alert(`Searching for: ${searchTerm}`);
             searchInput.value = '';
         }
@@ -28,17 +26,15 @@ categoryLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const category = this.getAttribute('data-category');
-        
-        // Remove active class from all links
+    
         categoryLinks.forEach(l => l.classList.remove('active'));
-        // Add active class to clicked link
+
         this.classList.add('active');
         
-        // Here you would typically filter posts based on category
-        // For now, we'll just show an alert
         alert(`Filtering by category: ${category}`);
     });
 });
+
 
 // Tag Filter
 const tagLinks = document.querySelectorAll('.tags a');
@@ -46,9 +42,7 @@ tagLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const tag = this.textContent;
-        
-        // Here you would typically filter posts based on tag
-        // For now, we'll just show an alert
+
         alert(`Filtering by tag: ${tag}`);
     });
 });
@@ -60,13 +54,10 @@ paginationLinks.forEach(link => {
         e.preventDefault();
         const page = this.textContent;
         
-        // Remove active class from all links
         paginationLinks.forEach(l => l.classList.remove('active'));
-        // Add active class to clicked link
+
         this.classList.add('active');
         
-        // Here you would typically load the next page of posts
-        // For now, we'll just show an alert
         alert(`Loading page: ${page}`);
     });
 });
@@ -101,7 +92,6 @@ if ('IntersectionObserver' in window) {
 
     lazyImages.forEach(img => imageObserver.observe(img));
 } else {
-    // Fallback for browsers that don't support IntersectionObserver
     lazyImages.forEach(img => {
         img.src = img.dataset.src;
         img.removeAttribute('data-src');
